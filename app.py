@@ -5,6 +5,11 @@ app = Flask(__name__)
 # Base de datos en memoria
 usuarios = []
 
+# Ruta de inicio (home)
+@app.route('/')
+def home():
+    return "¡Servicio Web Flask desplegado con éxito!"
+
 # CREATE: Crear un nuevo usuario
 @app.route('/usuarios', methods=['POST'])
 def crear_usuario():
